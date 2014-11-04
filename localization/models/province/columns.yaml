@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    state:
+      label: State
+      relation: state
+      select: @name
+
+    name:
+      label: Name
+
+    code:
+      label: Code

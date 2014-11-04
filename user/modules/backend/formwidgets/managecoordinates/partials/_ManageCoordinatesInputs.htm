@@ -1,0 +1,37 @@
+<div class="form-tabless-fields">
+
+    <!-- LATITUDE -->
+    <div class="form-group text-field span-left" data-column-name="latitude">
+
+        <label for="Form-field-<?php echo $this->form_group ?>-latitude">Latitude</label>
+
+        <!-- Text -->
+        <input type="text" name="<?php echo $this->form_group ?>[latitude]" id="Form-field-<?php echo $this->form_group ?>-latitude" value="<?php if(!empty($initial_latitude)){ echo $initial_latitude; } ?>" placeholder="" class="form-control" autocomplete="off" maxlength="12">
+
+    </div>
+
+
+    <!-- LONGITUDE -->
+    <div class="form-group text-field span-right" data-column-name="longitude">
+
+        <label for="Form-field-<?php echo $this->form_group ?>-longitude">Longitude</label>
+
+        <!-- Text -->
+        <input type="text" name="<?php echo $this->form_group ?>[longitude]" id="Form-field-<?php echo $this->form_group ?>-longitude" value="<?php if(!empty($initial_longitude)){ echo $initial_longitude; } ?>" placeholder="" class="form-control" autocomplete="off" maxlength="12">
+
+    </div>
+
+
+    <!-- ALTITUDE -->
+    <div class="form-group number-field span-left" data-column-name="altitude">
+
+        <label for="Form-field-<?php echo $this->form_group ?>-altitude">Altitude (in meters)</label>
+
+        <!-- Text -->
+        <input type="number" name="<?php echo $this->form_group ?>[altitude]" id="Form-field-<?php echo $this->form_group ?>-altitude" value="<?php if(!empty($initial_altitude)){ echo $initial_altitude; } ?>" placeholder="" class="form-control" autocomplete="off" maxlength="4">
+
+    </div>
+
+
+
+</div>

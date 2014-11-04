@@ -1,0 +1,23 @@
+{% if not user %}
+
+    {% if __SELF__.accountAction == 'registerUser' %}
+
+        {% partial __SELF__ ~ '::register_user' %}
+
+    {% elseif __SELF__.accountAction == 'registerOrganization' %}
+
+        {% partial __SELF__ ~ '::register_organization' %}
+
+    {% else %}
+
+        {% partial __SELF__ ~ '::signin' %}
+
+    {% endif %}
+
+{% else %}
+
+    {% partial __SELF__ ~ '::activation_check' %}
+
+    {% partial __SELF__ ~ '::update' %}
+
+{% endif %}

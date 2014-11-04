@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Temperatures
+list: @/plugins/cnesmeteo/data/models/temperature/columns.yaml
+modelClass: CnesMeteo\Data\Models\Temperature
+recordUrl: cnesmeteo/data/temperatures/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

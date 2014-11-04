@@ -1,0 +1,22 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  name:
+    span: full
+    label: Name
+
+  address:
+    span: full
+    label: Address
+
+secondaryTabs:
+  fields:
+    featured_images:
+      label: Images
+      type: fileupload
+      options:
+        mode: image
+        image-height: 260
+        image-width: 260

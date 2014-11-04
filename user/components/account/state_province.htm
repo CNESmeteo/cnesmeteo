@@ -1,0 +1,23 @@
+<div class="form-group">
+    <select
+            id="state"
+            name="state"
+            class="select-block custom-theme-select"
+            data-request="{{__SELF__}}::onStateChange"
+            data-request-update="'{{__SELF__}}::provincesPartial': '#partialProvince'"
+            data-request-success='$("#partialProvince").find(".custom-theme-select").selectpicker({style: "btn-primary", menuStyle: "dropdown-inverse"})'
+            >
+        {% for key, stateName in states %}
+            <option
+                value="{{ key }}"
+                {% if key == state %} " selected="selected" " {% endif %}
+            >
+            {{ stateName|e }}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+
+<div id="partialProvince">
+    {% partial __SELF__ ~ '::provincesPartial' %}
+</div>

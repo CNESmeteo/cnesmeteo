@@ -1,0 +1,63 @@
+<div class="panel panel-default">
+
+
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a href="#org_step2" data-parent="#accordion-demo" data-toggle="collapse">
+                Information (II)
+            </a>
+        </h4>
+    </div>
+
+
+    <div id="org_step2" class="panel-collapse collapse in">
+        <div class="panel-body">
+
+            <div class="signin-form">
+
+                <div class="form-group">
+
+                    <select
+                            id="org-organization-type"
+                            name="type"
+                            class="select-block custom-theme-select"
+                    >
+                        {% for key, organizationTypeName in organization_types %}
+                        <option
+                            value="{{ key }}"
+                            {% if key == organization_type %} " selected="selected" " {% endif %}
+                        >
+                            {{ organizationTypeName|e }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                    <label class="signin-field-icon fui-cmd" for="org-organization-type"></label>
+                </div>
+
+                <div class="form-group">
+                    <input
+                            type="text"
+                            class="form-control signin-field"
+                            value=""
+                            placeholder="Enter the school R.N.E (for French schools only)"
+                            name="RNE"
+                            id="org-RNE" />
+                    <label class="signin-field-icon fui-list" for="org-RNE"></label>
+                </div>
+
+                <div class="form-group">
+                    <input
+                            type="text"
+                            class="form-control signin-field"
+                            value=""
+                            placeholder="Enter the school website"
+                            name="website"
+                            id="org-website" />
+                    <label class="signin-field-icon fui-video" for="org-website"></label>
+                </div>
+
+            </div>
+
+        </div> <!--/.panel-body -->
+    </div> <!-- /#addwizard -->
+</div> <!-- /.panel.panel-default -->

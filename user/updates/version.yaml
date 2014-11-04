@@ -1,0 +1,13 @@
+1.0.2:
+  - Database tables Migration & Seed
+  - create_users_table.php
+  - create_groups_table.php
+  - create_organizations_table.php
+  - create_organizations_users_table.php
+  - create_classrooms_table.php
+  - create_sites_table.php
+  - create_classrooms_sites_table.php
+  - create_classrooms_users_table.php
+  - create_certifications_table.php
+  - seed_all_tables.php
+1.0.1: Initialize CnesMeteo User plugin

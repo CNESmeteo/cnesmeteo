@@ -1,0 +1,22 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  organization_id:
+    type: dropdown
+    span: full
+    label: Organization
+    options: listOrganizations
+
+  name:
+    span: left
+    label: Name
+    placeholder: 1-A, meteo, etc.
+
+  academic_year_start:
+    type: text
+    span: right
+    label: Academic Year (Start)
+    default: 2014

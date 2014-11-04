@@ -1,0 +1,20 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  user_id:
+    label: User
+    span: full
+    type: dropdown
+    options: listUnCertificatedUsers
+
+  globeID:
+    label: Globe ID
+    span: full
+
+  certified:
+    label: Certified
+    span: full
+    type: switch

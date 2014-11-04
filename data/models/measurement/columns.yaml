@@ -1,0 +1,27 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    type:
+        label: Type
+        type: text
+        searchable: true
+
+    inGLOBE:
+        label: In GLOBE
+        type: switch
+
+    organization_id:
+        label: Organization
+        relation: organization
+        select: @name
+        searchable: true
+
+    user_name:
+        label: User
+        searchable: true
+
+    measured_datetime:
+        label: Measured at
+        sortable: true

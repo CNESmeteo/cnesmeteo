@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Province
+
+# Model Form Field configuration
+form: @/plugins/cnesmeteo/localization/models/province/fields.yaml
+
+# Model Class name
+modelClass: CnesMeteo\Localization\Models\Province
+
+# Default redirect location
+defaultRedirect: cnesmeteo/localization/provinces
+
+# Create page
+create:
+    title: Create Province
+    redirect: cnesmeteo/localization/provinces/update/:id
+    redirectClose: cnesmeteo/localization/provinces
+
+# Update page
+update:
+    title: Edit Province
+    redirect: cnesmeteo/localization/provinces
+    redirectClose: cnesmeteo/localization/provinces

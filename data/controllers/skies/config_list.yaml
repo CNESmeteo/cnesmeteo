@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Skies
+list: @/plugins/cnesmeteo/data/models/sky/columns.yaml
+modelClass: CnesMeteo\Data\Models\Sky
+recordUrl: cnesmeteo/data/skies/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

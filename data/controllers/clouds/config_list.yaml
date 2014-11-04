@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Clouds
+list: @/plugins/cnesmeteo/data/models/cloud/columns.yaml
+modelClass: CnesMeteo\Data\Models\Cloud
+recordUrl: cnesmeteo/data/clouds/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

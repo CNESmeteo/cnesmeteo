@@ -1,0 +1,84 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  photometer:
+    label: Photometer
+    type: relation
+    nameColumn: name
+
+  # Future: fill "nm" in label for selected photometer
+  aot_red:
+    span: full
+    label: AOT (Red channel)
+    placeholder: 0.0
+    #depends: ['photometer_id']
+
+  aot_green:
+    span: full
+    label: AOT (Green channel)
+    placeholder: 0.0
+    #depends: ['photometer_id']
+
+  aot_blue:
+    span: full
+    label: AOT (Blue channel)
+    placeholder: 0.0
+    #depends: ['photometer_id']
+
+
+  voltage_temperature:
+    span: full
+    label: Temperature (from voltage x 100)
+    comment: Multiply voltage reading by
+    cssClass: hide
+    #depends: ['photometer_id']
+
+  voltage_light:
+    span: full
+    label: Maximum voltage in the sun
+    cssClass: hide
+    #depends: ['photometer_id']
+
+  voltage_dark:
+    span: full
+    label: Voltage reading in the dark
+    cssClass: hide
+    #depends: ['photometer_id']
+
+  comments:
+    span: full
+    label: Comments (Max 140 characters)
+    type: textarea
+    size: tiny
+
+  measured_at:
+    span: full
+    label: Measurement datetime
+    type: datepicker
+    mode: datetime
+    comment: Format: Year-Month-Day || Hour: 09:00-AM | 12:00-AM (Noon) | Custom
+
+  globe_protocol:
+    span: left
+    label: Use GLOBE clouds protocol?
+    type: checkbox
+    default: false
+
+  observed_sky_color:
+    type: dropdown
+    span: full
+    label: Observed sky color
+    options: listObservedSkyColors
+    cssClass: hide
+    #depends: ['globe_protocol']
+
+  observed_sky_clarity:
+    type: dropdown
+    span: left
+    label: Observed sky clarity
+    options: listObservedSkyClarity
+    cssClass: hide
+    #depends: ['globe_protocol']

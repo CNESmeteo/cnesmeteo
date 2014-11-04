@@ -1,0 +1,53 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  name:
+    span: full
+    label: Name
+
+  email:
+    span: full
+    label: Email
+
+  address:
+    span: full
+    label: Address
+
+  website:
+    span: full
+    label: Website
+
+  phone:
+    span: left
+    label: Phone
+
+  RNE:
+    span: right
+    label: R.N.E. (not mandatory)
+    placeholder: School ID code (max 8 chars)
+
+  type:
+    type: dropdown
+    span: left
+    label: Organization Type
+    options: listOrganizationTypes
+
+  language_id:
+    type: dropdown
+    span: right
+    label: Default Language
+    options: listLanguages
+
+
+secondaryTabs:
+  fields:
+
+    avatar:
+      label: Avatar
+      type: fileupload
+      options:
+        mode: image
+        image-height: 260
+        image-width: 260

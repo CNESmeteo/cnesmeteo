@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Humidity
+form: @/plugins/cnesmeteo/data/models/humidity/fields.yaml
+modelClass: CnesMeteo\Data\Models\Humidity
+defaultRedirect: cnesmeteo/data/humidities
+
+create:
+    redirect: cnesmeteo/data/humidities/update/:measurement_id
+    redirectClose: cnesmeteo/data/humidities
+
+update:
+    redirect: cnesmeteo/data/humidities
+    redirectClose: cnesmeteo/data/humidities

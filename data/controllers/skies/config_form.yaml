@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Sky
+form: @/plugins/cnesmeteo/data/models/sky/fields.yaml
+modelClass: CnesMeteo\Data\Models\Sky
+defaultRedirect: cnesmeteo/data/skies
+
+create:
+    redirect: cnesmeteo/data/skies/update/:measurement_id
+    redirectClose: cnesmeteo/data/skies
+
+update:
+    redirect: cnesmeteo/data/skies
+    redirectClose: cnesmeteo/data/skies

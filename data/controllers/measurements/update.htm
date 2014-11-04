@@ -1,0 +1,127 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('cnesmeteo/user/users') ?>">Users</a></li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+    <?php Block::put('form-contents') ?>
+
+        <?php if (!$formModel->activated): ?>
+            <div class="callout callout-warning">
+                <div class="header">
+                    <i class="icon-warning"></i>
+                    <h3>User not activated!</h3>
+                    <p>This user has not been activated and will be unable to sign in.</p>
+                </div>
+                <div class="content">
+                    <div class="loading-indicator-container">
+                        <button
+                            type="button"
+                            class="btn btn-warning"
+                            data-request="onActivate"
+                            data-load-indicator="Activating..."
+                            data-request-confirm="Do you really want to activate this user?">
+                            Activate this user manually
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <?php endif ?>
+
+        <?= $this->formRenderOutsideFields() ?>
+
+
+
+        <!-- TabControl -->
+        <div id="Form-primaryTabs" class="control-tabs primary layout-row min-size has-tabs" data-control="tab" data-slidable="">
+            <div class="">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#primarytab-1" data-target="#tabs_location" data-toggle="tab" title="Location">Location</a><span class="tab-close"><i class="icon-times"></i></span></li>
+                    <li class=""><a href="#primarytab-2" data-target="#tabs_certifications" data-toggle="tab" title="Classrooms">Certifications</a><span class="tab-close"><i class="icon-times"></i></span></li>
+                </ul>
+            </div>
+
+            <div class="tab-content ">
+
+                <!-- Manage Location -->
+                <div class="tab-pane active " id="tabs_location">
+                    <?= $this->widget->dropdownsmanagelocation->render() ?>
+                </div>
+
+                <!-- Manage Classrooms relations -->
+                <div class="tab-pane  " id="tabs_certifications">
+                    HasOne relationship form type is in a TODO state in OctoberCMS at the moment
+                    <br><br>
+                    In this "tab-pane" div, replace all content for:
+                    <br>
+                    $this->relationRender('certification')
+                    <br><br>
+                    <a href="http://octobercms.com/docs/backend/relations">Link to the docs</a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <?= $this->formRenderPrimaryTabs() ?>
+
+        <div class="form-buttons layout-item fix">
+            <div class="loading-indicator-container">
+                <button 
+                    type="submit"
+                    data-request="onSave"
+                    data-request-data="redirect:0"
+                    data-hotkey="ctrl+s"
+                    data-hotkey-mac="cmd+s"
+                    data-load-indicator="Saving User..."
+                    class="btn btn-primary">
+                    <u>S</u>ave
+                </button>
+                <button 
+                    type="button"
+                    data-request="onSave"
+                    data-request-data="close:1"
+                    data-hotkey="ctrl+enter"
+                    data-hotkey-mac="cmd+enter"
+                    data-load-indicator="Saving User..."
+                    class="btn btn-default">
+                    Save and Close
+                </button>
+                <span class="btn-text">
+                    or <a href="<?= Backend::url('cnesmeteo/user/users') ?>">Cancel</a>
+                </span>
+                <button
+                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    data-request="onDelete"
+                    data-load-indicator="Deleting User..."
+                    data-request-confirm="Do you really want to delete this user?">
+                </button>
+            </div>
+        </div>
+
+    <?php Block::endPut() ?>
+
+    <?php Block::put('form-sidebar') ?>
+        <div><?= $this->formRenderSecondaryTabs() ?></div>
+    <?php Block::endPut() ?>
+
+    <?php Block::put('body') ?>
+        <?= Form::open(['class'=>'layout stretch']) ?>
+            <?= $this->makeLayout('form-with-sidebar') ?>
+        <?= Form::close() ?>
+    <?php Block::endPut() ?>
+
+<?php else: ?>
+    <div class="padded-container">
+        <div class="control-breadcrumb">
+            <?= Block::placeholder('breadcrumb') ?>
+        </div>
+        <p class="flash-message static error"><?= e($this->fatalError) ?></p>
+        <p><a href="<?= Backend::url('cnesmeteo/user/users') ?>" class="btn btn-default">Return to users list</a></p>
+    </div>
+<?php endif ?>

@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Windforces
+list: @/plugins/cnesmeteo/data/models/windforce/columns.yaml
+modelClass: CnesMeteo\Data\Models\Windforce
+recordUrl: cnesmeteo/data/windforces/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

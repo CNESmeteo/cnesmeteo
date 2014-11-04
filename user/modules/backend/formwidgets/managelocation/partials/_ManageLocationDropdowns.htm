@@ -1,0 +1,68 @@
+<div class="form-tabless-fields">
+    <div class="form-group dropdown-field span-full">
+
+        <label for="Form-form-field-<?php echo $this->form_group ?>-country_id">Country</label>
+
+        <!-- Countries Dropdown -->
+        <select
+                id="Form-form-field-<?php echo $this->form_group ?>-country_id"
+                name="<?php echo $this->form_group ?>[country_id]"
+                class="form-control custom-select"
+                data-request="<?= $this->getEventHandler('onCountryChange') ?>"
+                >
+
+            <?php foreach ($countries as $country_id => $country_name){ ?>
+                <option <?php if($country_id === $selected_country_id){ echo "selected"; } ?>  value="<?php echo $country_id ?>" >
+                    <?php echo $country_name ?>
+                </option>
+            <?php } ?>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group dropdown-field span-left">
+
+        <label for="Form-form-field-<?php echo $this->form_group ?>-state_id">State</label>
+
+        <!-- States Dropdown -->
+        <select
+                id="Form-form-field-<?php echo $this->form_group ?>-state_id"
+                name="<?php echo $this->form_group ?>[state_id]"
+                class="form-control custom-select"
+                data-request="<?= $this->getEventHandler('onStateChange') ?>"
+                >
+
+            <?php foreach ($states as $state_id => $state_name){ ?>
+            <option <?php if($state_id === $selected_state_id){ echo "selected"; } ?> value="<?php echo $state_id ?>" >
+                <?php echo $state_name ?>
+            </option>
+            <?php } ?>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group dropdown-field span-right">
+
+        <label for="Form-form-field-<?php echo $this->form_group ?>-province_id">Province</label>
+
+        <!-- Provinces Dropdown -->
+        <select
+                id="Form-form-field-<?php echo $this->form_group ?>-province_id"
+                name="<?php echo $this->form_group ?>[province_id]"
+                class="form-control custom-select"
+                >
+
+            <?php foreach ($provinces as $province_id => $province_name){ ?>
+                <option <?php if($province_id === $selected_province_id){ echo "selected"; } ?> value="<?php echo $province_id ?>" >
+                    <?php echo $province_name ?>
+                </option>
+            <?php } ?>
+
+        </select>
+
+    </div>
+</div>

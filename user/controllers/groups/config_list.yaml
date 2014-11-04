@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: backend::lang.user.group.list_title
+list: @/plugins/cnesmeteo/user/models/group/columns.yaml
+modelClass: CnesMeteo\User\Models\Group
+recordUrl: cnesmeteo/user/groups/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 15
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

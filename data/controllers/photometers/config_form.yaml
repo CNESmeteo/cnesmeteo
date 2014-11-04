@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Photometers
+form: @/plugins/cnesmeteo/data/models/photometer/fields.yaml
+modelClass: CnesMeteo\Data\Models\Photometer
+defaultRedirect: cnesmeteo/data/photometers
+
+create:
+    redirect: cnesmeteo/data/photometers/update/:id
+    redirectClose: cnesmeteo/data/photometers
+
+update:
+    redirect: cnesmeteo/data/photometers
+    redirectClose: cnesmeteo/data/photometers

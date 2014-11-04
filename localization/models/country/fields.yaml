@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    enabled:
+        label: Enabled
+        type: checkbox
+
+    name:
+        label: Name
+        span: auto
+
+    code:
+        label: Code
+        span: auto
+        comment: Enter a unique code to identify this country (ISO 3166-3).

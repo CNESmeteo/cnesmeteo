@@ -1,0 +1,18 @@
+<div id="partialProvinces" class="form-group">
+
+    <select
+            id="province"
+            name="province"
+            class="select-block custom-theme-select"
+    >
+        {% for key, provinceName in provinces %}
+            <option
+                value="{{ key }}"
+                {% if key == province %} " selected="selected" " {% endif %}
+            >
+                {{ provinceName|e }}
+            </option>
+        {% endfor %}
+    </select>
+
+</div>

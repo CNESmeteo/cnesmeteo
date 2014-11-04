@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: backend::lang.user.group.name
+form: @/plugins/cnesmeteo/user/models/group/fields.yaml
+modelClass: CnesMeteo\User\Models\Group
+defaultRedirect: cnesmeteo/user/groups
+
+create:
+    redirect: cnesmeteo/user/groups/update/:id
+    redirectClose: cnesmeteo/user/groups
+
+update:
+    redirect: cnesmeteo/user/groups
+    redirectClose: cnesmeteo/user/groups

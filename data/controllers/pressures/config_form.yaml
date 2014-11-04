@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Pressures
+form: @/plugins/cnesmeteo/data/models/pressure/fields.yaml
+modelClass: CnesMeteo\Data\Models\Pressure
+defaultRedirect: cnesmeteo/data/pressures
+
+create:
+    redirect: cnesmeteo/data/pressures/update/:measurement_id
+    redirectClose: cnesmeteo/data/pressures
+
+update:
+    redirect: cnesmeteo/data/pressures
+    redirectClose: cnesmeteo/data/pressures

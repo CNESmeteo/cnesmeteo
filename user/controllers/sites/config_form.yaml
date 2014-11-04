@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Site
+form: @/plugins/cnesmeteo/user/models/site/fields.yaml
+modelClass: CnesMeteo\User\Models\Site
+defaultRedirect: cnesmeteo/user/sites
+
+create:
+    redirect: cnesmeteo/user/sites/update/:id
+    redirectClose: cnesmeteo/user/sites
+
+update:
+    redirect: cnesmeteo/user/sites
+    redirectClose: cnesmeteo/user/sites

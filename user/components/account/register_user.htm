@@ -1,0 +1,76 @@
+<div class="signin-container">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="signin" style="padding-top: 16px;">
+
+                    <h2 style="text-align: center">{{ userType|capitalize }} registration</h2>
+
+                    <div class="signin-screen" style="padding-top: 16px;">
+                        <div class="signin-icon" style="top: 132px;">
+                            <img src="{{ 'assets/images/logo.png'|theme }}" alt="Welcome to Calisph'Air" />
+                            <h4>Sign up to <small>Calisph'Air</small></h4>
+                        </div>
+
+                        <div class="signin-form">
+
+                            <form
+                                data-request = "{{ __SELF__ }}::onRegisterUser"
+                                data-request-success = "You are successfully registered!"
+                            >
+
+                                <div id="partialOrganizationClassroom">
+                                    {% partial __SELF__ ~ '::organization_classroom' %}
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                            type="text"
+                                            class="form-control signin-field"
+                                            value=""
+                                            placeholder="Enter your email"
+                                            name="email"
+                                            id="registerEmail" />
+                                    <label class="signin-field-icon fui-mail" for="registerEmail"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                            type="text"
+                                            class="form-control signin-field"
+                                            value=""
+                                            placeholder="Enter your username (at least 4 characters)"
+                                            name="login"
+                                            id="registerName" />
+                                    <label class="signin-field-icon fui-user" for="registerName"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input
+                                            type="password"
+                                            class="form-control signin-field"
+                                            value=""
+                                            placeholder="Choose a password (at least 6 characters)"
+                                            name="password"
+                                            id="registerPassword" />
+                                    <label class="signin-field-icon fui-lock" for="registerPassword"></label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+
+                            </form>
+
+                            <a class="signin-link" href="{{ 'user/recover-password'|page }}">Have you forgotten your password?</a>
+
+                            <a class="signin-link" href="{{ 'user/signin'|page }}">Already have an account?</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,50 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  name:
+    span: full
+    label: Name
+    required: true
+
+  description:
+    span: full
+    label: Description
+    type: textarea
+    size: small
+    comment: The use of HTML tags is allowed
+
+  aot_directly:
+    span: auto
+    label: Can calculate the AOT directly?
+    type: checkbox
+    default: true
+
+  wavelength_red:
+    span: auto
+    label: Wavelenght for RED channel (nm)
+    type: number
+    placeholder: 619
+
+  wavelength_green:
+    span: auto
+    label: Wavelenght for GREEN channel (nm)
+    type: number
+    placeholder: 540
+
+  wavelength_blue:
+    span: auto
+    label: Wavelenght for BLUE channel (nm)
+    type: number
+    placeholder: 465
+
+
+secondaryTabs:
+  fields:
+    featured_image:
+      label: Image
+      type: fileupload
+      mode: image
+      imageHeight: 260
+      imageWidth: 260

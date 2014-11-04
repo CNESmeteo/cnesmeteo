@@ -1,0 +1,24 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  skytype_id:
+      span: full
+      label: Sky Type Name
+      type: dropdown
+      options: listSkyTypeValues
+
+  comments:
+    span: full
+    label: Comments (Max 140 characters)
+    type: textarea
+    size: tiny
+
+  measured_at:
+    span: full
+    label: Measurement datetime
+    type: datepicker
+    mode: date
+    comment: Default hour: 09:00-AM | 12:00-AM (Noon) | Custom

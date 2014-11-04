@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Precipitations
+list: @/plugins/cnesmeteo/data/models/precipitation/columns.yaml
+modelClass: CnesMeteo\Data\Models\Precipitation
+recordUrl: cnesmeteo/data/precipitations/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

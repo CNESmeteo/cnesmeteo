@@ -1,0 +1,18 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+       label: ID
+       type: numeric
+
+    type_translated:
+        label: Type
+
+    name:
+            label: Name
+
+    image:
+        label: Image

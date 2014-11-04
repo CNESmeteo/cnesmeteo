@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Clouds
+form: @/plugins/cnesmeteo/data/models/cloud/fields.yaml
+modelClass: CnesMeteo\Data\Models\Cloud
+defaultRedirect: cnesmeteo/data/clouds
+
+create:
+    redirect: cnesmeteo/data/clouds/update/:measurement_id
+    redirectClose: cnesmeteo/data/clouds
+
+update:
+    redirect: cnesmeteo/data/clouds
+    redirectClose: cnesmeteo/data/clouds

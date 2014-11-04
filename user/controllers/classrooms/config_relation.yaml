@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+sites:
+    label: Sites
+    list: @/plugins/cnesmeteo/user/models/site/columns.yaml
+    form: @/plugins/cnesmeteo/user/models/site/fields.yaml
+    # pivot: @/plugins/cnesmeteo/user/models/site/fields.yaml
+    # toolbar:
+    #     buttons: relation_toolbar

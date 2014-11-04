@@ -1,0 +1,7 @@
+<?php if(!empty($users)){ ?>
+    <?php foreach ($users as $user_id => $user_name){ ?>
+        <option value="<?php echo $user_id ?>" >
+            <?php echo $user_name ?>
+        </option>
+    <?php } ?>
+<?php } ?>

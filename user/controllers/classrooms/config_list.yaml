@@ -1,0 +1,19 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Classrooms
+list: @/plugins/cnesmeteo/user/models/classroom/columns.yaml
+modelClass: CnesMeteo\User\Models\Classroom
+recordUrl: cnesmeteo/user/classrooms/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt
+
+
+

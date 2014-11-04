@@ -1,0 +1,17 @@
+1.0.2:
+  - Database tables Migration & Seed
+  - create_measurements_table.php
+  - create_temperatures_table.php
+  - create_pressures_table.php
+  - create_snows_table.php
+  - create_precipitations_table.php
+  - create_humidities_table.php
+  - create_windforces_table.php
+  - create_winddirections_table.php
+  - create_clouds_table.php
+  - create_skies_table.php
+  - create_skytypes_table.php
+  - create_photometers_table.php
+  - create_aerosols_table.php
+  - seed_all_tables.php
+1.0.1: Initialize Data plugin

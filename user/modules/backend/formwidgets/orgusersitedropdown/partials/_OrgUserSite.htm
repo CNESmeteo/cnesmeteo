@@ -1,0 +1,69 @@
+<div class="form-tabless-fields">
+    <div class="form-group dropdown-field span-full">
+
+        <label for="Form-form-field-<?php echo $this->form_group ?>-organization_id">Organization</label>
+
+        <!-- Dropdown -->
+        <select
+                id="Form-form-field-<?php echo $this->form_group ?>-organization_id"
+                name="<?php echo $this->form_group ?>[organization_id]"
+                class="form-control custom-select"
+                data-request="<?= $this->getEventHandler('onOrganizationChange') ?>"
+                >
+
+            <?php foreach ($organizations as $org_id => $org_name){ ?>
+                <option <?php if($org_id === $selected_organization_id){ echo "selected"; } ?> value="<?php echo $org_id ?>" >
+                    <?php echo $org_name ?>
+                </option>
+            <?php } ?>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group dropdown-field span-left">
+
+        <label for="Form-form-field-<?php echo $this->form_group ?>-user_id">User</label>
+
+        <!-- Dropdown -->
+        <select
+                id="Form-form-field-<?php echo $this->form_group ?>-user_id"
+                name="<?php echo $this->form_group ?>[user_id]"
+                class="form-control custom-select"
+                >
+
+            <?php foreach ($users as $user_id => $user_name){ ?>
+                <option <?php if($user_id === $selected_user_id){ echo "selected"; } ?> value="<?php echo $user_id ?>" >
+                    <?php echo $user_name ?>
+                </option>
+            <?php } ?>
+
+        </select>
+
+    </div>
+
+
+    <div class="form-group dropdown-field span-right">
+
+        <label for="Form-form-field-<?php echo $this->form_group ?>-site_id">Measurement Site</label>
+
+        <!-- Dropdown -->
+        <select
+                id="Form-form-field-<?php echo $this->form_group ?>-site_id"
+                name="<?php echo $this->form_group ?>[site_id]"
+                class="form-control custom-select"
+                >
+
+            <?php foreach ($sites as $site_id => $site_name){ ?>
+            <option <?php if($site_id === $selected_site_id){ echo "selected"; } ?> value="<?php echo $site_id ?>" >
+            <?php echo $site_name ?>
+            </option>
+            <?php } ?>
+
+        </select>
+
+    </div>
+
+
+</div>

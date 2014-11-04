@@ -1,0 +1,24 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  name:
+    span: full
+    label: Name
+
+  type:
+    span: full
+    label: Type
+    type: dropdown
+    options: listSkyTypeEnumNames
+
+
+secondaryTabs:
+  fields:
+    featured_image:
+      label: Image
+      type: fileupload
+      mode: image
+      imageHeight: 260
+      imageWidth: 260

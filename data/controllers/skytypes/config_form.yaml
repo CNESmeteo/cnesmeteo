@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Sky Type
+form: @/plugins/cnesmeteo/data/models/skytype/fields.yaml
+modelClass: CnesMeteo\Data\Models\Skytype
+defaultRedirect: cnesmeteo/data/skytypes
+
+create:
+    redirect: cnesmeteo/data/skytypes/update/:id
+    redirectClose: cnesmeteo/data/skytypes
+
+update:
+    redirect: cnesmeteo/data/skytypes
+    redirectClose: cnesmeteo/data/skytypes

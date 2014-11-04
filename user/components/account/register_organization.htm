@@ -1,0 +1,41 @@
+<div class="signin-container">
+    <div class="container">
+
+        <div class="row">
+            <h2 style="text-align: center">School registration</h2>
+        </div>
+        <div class="row acc-wizard">
+            <div class="col-md-3" style="padding-left: 2em;">
+                <p style="margin-bottom: 2em;">
+                    Follow the steps to request the registration of your school.
+                </p>
+                <ol class="acc-wizard-sidebar">
+                    <li class="acc-wizard-todo acc-wizard-active"><a href="#org_step1">Information (I)</a></li>
+                    <li class="acc-wizard-todo"><a href="#org_step2">Information (II)</a></li>
+                    <li class="acc-wizard-todo"><a href="#org_step3">Information (III)</a></li>
+                    <li class="acc-wizard-todo"><a href="#org_step4">Information (IV)</a></li>
+                    <li class="acc-wizard-todo"><a href="#org_step5">Final</a></li>
+                </ol>
+            </div>
+            <div class="col-md-9" style="padding-right: 2em;">
+                <div id="accordion-demo" class="panel-group">
+
+                    <form
+                        data-request = "{{ __SELF__ }}::onRegisterOrganization"
+                        data-request-success = "Organization register requested succesfully!"
+                    >
+
+                        {% partial __SELF__ ~ '::register_organization_step1' %}
+                        {% partial __SELF__ ~ '::register_organization_step2' %}
+                        {% partial __SELF__ ~ '::register_organization_step3' %}
+                        {% partial __SELF__ ~ '::register_organization_step4' %}
+                        {% partial __SELF__ ~ '::register_organization_step5' %}
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

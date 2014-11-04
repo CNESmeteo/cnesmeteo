@@ -1,0 +1,31 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    measurement_id:
+       label: ID
+       type: numeric
+
+    value_formatted:
+        label: Value
+
+    # NOT USED THIS WAY BECAUSE IT WOULDN'T BE TRANSLATED !!!
+    # skytype_id:
+    #  label: Sky
+    #  relation: skytype
+    #  select: @name
+    #  searchable: true
+
+    user_name:
+        label: User
+        searchable: true
+
+    organization_name:
+        label: Organization
+        searchable: true
+
+    measured_datetime:
+        label: Measured at
+        sortable: true

@@ -1,0 +1,19 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Organizations
+list: @/plugins/cnesmeteo/user/models/organization/columns.yaml
+modelClass: CnesMeteo\User\Models\Organization
+recordUrl: cnesmeteo/user/organizations/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt
+
+
+

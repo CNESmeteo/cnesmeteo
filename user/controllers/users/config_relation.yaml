@@ -1,0 +1,11 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+classrooms:
+    label: Classrooms
+    list: @/plugins/cnesmeteo/user/models/certification/columns.yaml
+    form: @/plugins/cnesmeteo/user/models/certification/fields.yaml
+    # pivot: @/plugins/cnesmeteo/user/models/classroom/fields.yaml
+    # toolbar:
+    #     buttons: relation_toolbar

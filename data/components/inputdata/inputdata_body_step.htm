@@ -1,0 +1,65 @@
+{% if name = "access_data_windforces" %}
+
+    <div id="access_data_windforces" class="signin-form">
+        {% partial __SELF__ ~ '::inputdata_body_windforces' %}
+    </div>
+
+{% elseif name = "access_data_skies" %}
+
+    <div id="access_data_skies" class="signin-form">
+        {% partial __SELF__ ~ '::inputdata_body_skies' %}
+    </div>
+
+{% elseif name = "access_data_clouds" %}
+
+    <div id="access_data_clouds" class="signin-form">
+        {% partial __SELF__ ~ '::inputdata_body_clouds' %}
+    </div>
+
+{% elseif name = "access_data_aerosols" %}
+
+    <div id="access_data_aerosols" class="signin-form">
+        {% partial __SELF__ ~ '::inputdata_body_aerosols' %}
+    </div>
+
+{% else %}
+
+    {# Default case - just value #}
+    <div id="{{ name }}" class="signin-form">
+        <div class="form-group">
+            <input
+                    type="text"
+                    class="form-control signin-field"
+                    value=""
+                    placeholder="Enter the {{ name }} value (ºC)"
+                    id="{{ name }}-value" />
+            <label class="signin-field-icon fui-new" for="{{ name }}-value"></label>
+        </div>
+    </div>
+
+{% endif %}
+
+
+
+
+{# Comments #}
+<div class="form-group">
+    <textarea id="{{ name }}-comments" class="form-control" rows="3" placeholder="Enter the comments"></textarea>
+    <label class="signin-field-icon fui-new" for="{{ name }}-comments"></label>
+</div>
+
+{# Measurement Sites #}
+<select
+        id="{{ name }}-site"
+        name="{{ name }}-site"
+        class="select-block custom-theme-select"
+        >
+    {% for key, siteName in sites %}
+        <option
+            value="{{ key }}"
+            {% if key == site %} " selected="selected" " {% endif %}
+        >
+            {{ siteName|e }}
+        </option>
+    {% endfor %}
+</select>

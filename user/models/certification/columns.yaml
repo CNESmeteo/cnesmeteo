@@ -1,0 +1,29 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+
+    #checkerID:
+    #    label: Checker
+    #    relation: checker
+    #    select: @last_name
+    #    searchable: true
+
+    certified:
+        label: Certified
+        type: switch
+
+    user_name:
+        label: User
+        searchable: true
+
+    checker_name:
+        label: Checker
+        searchable: true
+
+    updated_at:
+        label: Last updated
+        type: datetime
+        format: d/M/Y

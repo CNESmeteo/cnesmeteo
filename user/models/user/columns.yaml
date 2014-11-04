@@ -1,0 +1,29 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    id:
+        label: ID
+        searchable: true
+
+    is_activated:
+        label: Activated
+        type: switch
+
+    login:
+        label: Username
+        searchable: true
+
+    organization_name:
+        label: Organization
+        searchable: true
+
+    groups_name:
+        label: Groups
+        searchable: true
+
+    classroom_list:
+        label: Classrooms
+        type: text

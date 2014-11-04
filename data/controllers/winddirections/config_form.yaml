@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Wind Direction
+form: @/plugins/cnesmeteo/data/models/winddirection/fields.yaml
+modelClass: CnesMeteo\Data\Models\Winddirection
+defaultRedirect: cnesmeteo/data/winddirections
+
+create:
+    redirect: cnesmeteo/data/winddirections/update/:measurement_id
+    redirectClose: cnesmeteo/data/winddirections
+
+update:
+    redirect: cnesmeteo/data/temperatures
+    redirectClose: cnesmeteo/data/winddirections

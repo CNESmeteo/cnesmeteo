@@ -1,0 +1,33 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        select: name
+        searchable: true
+
+    type:
+        label: Type
+        select: type
+        searchable: true
+
+    is_activated:
+        label: Activated
+        type: switch
+
+    location:
+        label: Location
+        select: location
+        searchable: true
+
+    users_count:
+        label: Nº Members
+        searchable: true
+        type: number
+
+    classrooms_count:
+        label: Nº Classrooms
+        searchable: true
+        type: number

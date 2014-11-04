@@ -1,0 +1,23 @@
+<div class="form-group">
+    <select
+            id="organization"
+            name="organization"
+            class="select-block custom-theme-select"
+            data-request="{{__SELF__}}::onOrganizationChange"
+            data-request-update="'{{__SELF__}}::classroomsPartial': '#partialClassroom'"
+            data-request-success='$("#partialClassroom").find(".custom-theme-select").selectpicker({style: "btn-primary", menuStyle: "dropdown-inverse"})'
+    >
+        {% for key, organizationName in organizations %}
+            <option
+                value="{{ key }}"
+                {% if key == organization %} " selected="selected" " {% endif %}
+            >
+                {{ organizationName|e }}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+
+<div id="partialClassroom">
+    {% partial __SELF__ ~ '::classroomsPartial' %}
+</div>

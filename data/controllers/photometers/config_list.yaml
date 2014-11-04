@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Photometers
+list: @/plugins/cnesmeteo/data/models/photometer/columns.yaml
+modelClass: CnesMeteo\Data\Models\Photometer
+recordUrl: cnesmeteo/data/photometers/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

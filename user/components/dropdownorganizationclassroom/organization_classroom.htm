@@ -1,0 +1,17 @@
+<div class="form-group">
+    {{ form_select_organization('organization_id', form_value('organization_id'), {
+		id: 'organization',
+		class: 'select-block custom-theme-select',
+		'data-request': 'onInit',
+		'data-request-update': {
+			(__SELF__ ~ '::organization_classroom'): '#partialOrganizationClassroom'
+		}
+    }) }}
+</div>
+
+<div class="form-group">
+    {{ form_select_classroom('classroom_id', form_value('organization_id'), null, {
+		id: 'classroom',
+		class: 'select-block custom-theme-select'
+    }) }}
+</div>

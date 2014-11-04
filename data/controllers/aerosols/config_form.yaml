@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Aerosols
+form: @/plugins/cnesmeteo/data/models/aerosol/fields.yaml
+modelClass: CnesMeteo\Data\Models\Aerosol
+defaultRedirect: cnesmeteo/data/aerosols
+
+create:
+    redirect: cnesmeteo/data/aerosols/update/:measurement_id
+    redirectClose: cnesmeteo/data/aerosols
+
+update:
+    redirect: cnesmeteo/data/aerosols
+    redirectClose: cnesmeteo/data/aerosols

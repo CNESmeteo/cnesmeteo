@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Language
+
+# Model Form Field configuration
+form: @/plugins/cnesmeteo/localization/models/language/fields.yaml
+
+# Model Class name
+modelClass: CnesMeteo\Localization\Models\Language
+
+# Default redirect location
+defaultRedirect: cnesmeteo/localization/languages
+
+# Create page
+create:
+    title: Create Languages
+    redirect: cnesmeteo/localization/languages/update/:id
+    redirectClose: cnesmeteo/localization/languages
+
+# Update page
+update:
+    title: Edit Language
+    redirect: cnesmeteo/localization/languages
+    redirectClose: cnesmeteo/localization/languages
+
+# Preview page
+preview:
+    title: Preview Languages

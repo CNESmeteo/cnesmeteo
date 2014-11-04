@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Windforce
+form: @/plugins/cnesmeteo/data/models/windforce/fields.yaml
+modelClass: CnesMeteo\Data\Models\Windforce
+defaultRedirect: cnesmeteo/data/windforces
+
+create:
+    redirect: cnesmeteo/data/windforces/update/:measurement_id
+    redirectClose: cnesmeteo/data/windforces
+
+update:
+    redirect: cnesmeteo/data/temperatures
+    redirectClose: cnesmeteo/data/windforces

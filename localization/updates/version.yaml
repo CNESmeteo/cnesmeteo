@@ -1,0 +1,8 @@
+1.0.2:
+    - Database tables Migration & Seed
+    - create_languages_table.php
+    - create_countries_table.php
+    - create_states_table.php
+    - create_provinces_table.php
+    - seed_all_tables.php
+1.0.1: Initialize plugin

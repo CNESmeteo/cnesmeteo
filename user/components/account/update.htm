@@ -1,0 +1,62 @@
+<div class="signin-container">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <div class="signin" style="padding-top: 16px;">
+
+                    <h2 style="text-align: center">User profile</h2>
+
+                    <div class="signin-screen" style="padding-top: 16px;">
+                        <div class="signin-icon" style="top: 132px;">
+                            <img src="{{ 'assets/images/logo.png'|theme }}" alt="Welcome to Calisph'Air" />
+                            <h4>Welcome to <small>Calisph'Air</small></h4>
+                        </div>
+
+                        <div class="signin-form">
+
+
+                            {{ form_ajax('onUpdate', { model: user }) }}
+
+                                <div class="form-group">
+                                    <input name="first_name" type="text" class="form-control" id="first_name"  placeholder="Enter your first name" value="{{ form_value('first_name') }}">
+                                    <label class="signin-field-icon fui-user" for="first_name"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input name="last_name" type="text" class="form-control" id="last_name"  placeholder="Enter your last name" value="{{ form_value('last_name') }}">
+                                    <label class="signin-field-icon fui-user" for="last_name"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input name="phone" type="text" class="form-control" id="phone" placeholder="Enter your contact phone number" value="{{ form_value('phone') }}">
+                                    <label class="signin-field-icon fui-phone" for="phone"></label>
+                                </div>
+
+                                <div class="form-group">
+                                    <input name="address" type="text" class="form-control" id="address" placeholder="Enter your street address" value="{{ form_value('address') }}">
+                                    <label class="signin-field-icon fui-location" for="address"></label>
+                                </div>
+
+                                <div id="partialCountryStateProvince">
+                                    {% partial __SELF__ ~ '::country_state' %}
+                                </div>
+
+                                <button type="submit" class="btn btn-inverse btn-lg btn-block">Save</button>
+
+                            {{ form_close() }}
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

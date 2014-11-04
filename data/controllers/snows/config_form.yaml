@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Snow
+form: @/plugins/cnesmeteo/data/models/snow/fields.yaml
+modelClass: CnesMeteo\Data\Models\Snow
+defaultRedirect: cnesmeteo/data/snows
+
+create:
+    redirect: cnesmeteo/data/snows/update/:measurement_id
+    redirectClose: cnesmeteo/data/snows
+
+update:
+    redirect: cnesmeteo/data/temperatures
+    redirectClose: cnesmeteo/data/snows

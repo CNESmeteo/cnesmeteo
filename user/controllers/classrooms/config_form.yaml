@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Classroom
+form: @/plugins/cnesmeteo/user/models/classroom/fields.yaml
+modelClass: CnesMeteo\User\Models\Classroom
+defaultRedirect: cnesmeteo/user/classrooms
+
+create:
+    redirect: cnesmeteo/user/classrooms/update/:id
+    redirectClose: cnesmeteo/user/classrooms
+
+update:
+    redirect: cnesmeteo/user/classrooms
+    redirectClose: cnesmeteo/user/classrooms

@@ -1,0 +1,8 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+skytype:
+    label: Sky Type
+    list: @/plugins/cnesmeteo/data/models/skytype/columns.yaml
+    form: @/plugins/cnesmeteo/data/models/skytype/fields.yaml

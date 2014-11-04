@@ -1,0 +1,57 @@
+<div class="signin-container">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="signin">
+
+                    <h2 style="text-align: center">User login</h2>
+
+                    <div class="signin-screen" style="padding-top: 40px">
+                        <div class="signin-icon">
+                            <img src="{{ 'assets/images/logo.png'|theme }}" alt="Welcome to Calisph'Air" />
+                            <h4>Welcome to <small>Calisph'Air</small></h4>
+                        </div>
+
+                        <div class="signin-form">
+						
+							<form data-request="onSignin">
+
+								<div class="form-group">
+									<input
+											type="text"
+											class="form-control signin-field"
+											value=""
+											placeholder="Enter your username"
+											name="login"
+											id="signin-login" />
+									<label class="signin-field-icon fui-user" for="signin-login"></label>
+								</div>
+
+								<div class="form-group">
+									<input
+											type="password"
+											class="form-control signin-field"
+											value=""
+											placeholder="Password"
+											name="password"
+											id="signin-pass" />
+									<label class="signin-field-icon fui-lock" for="signin-pass"></label>
+								</div>
+
+								<button class="btn btn-primary btn-lg btn-block" type="submit">Log in</button>
+								
+							</form>
+
+							<a class="signin-link" href="{{ 'user/recover-password'|page }}">Lost your password?</a>
+							<a class="signin-link" href="{{ 'user/register-menu'|page }}">Create an account</a>
+						
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

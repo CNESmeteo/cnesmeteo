@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Certification
+form: @/plugins/cnesmeteo/user/models/certification/fields.yaml
+modelClass: CnesMeteo\User\Models\Certification
+defaultRedirect: cnesmeteo/user/certifications
+
+create:
+    redirect: cnesmeteo/user/certifications/update/:id
+    redirectClose: cnesmeteo/user/certifications
+
+update:
+    redirect: cnesmeteo/user/certifications
+    redirectClose: cnesmeteo/user/certifications

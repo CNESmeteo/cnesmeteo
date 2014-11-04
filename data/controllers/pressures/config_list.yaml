@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Pressures
+list: @/plugins/cnesmeteo/data/models/pressure/columns.yaml
+modelClass: CnesMeteo\Data\Models\Pressure
+recordUrl: cnesmeteo/data/pressures/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

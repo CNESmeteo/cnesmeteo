@@ -1,0 +1,51 @@
+<div class="signin-container">
+    <div class="container">
+
+        <div class="row">
+            <h2 style="text-align: center">Add new measurements</h2>
+        </div>
+        <div class="row acc-wizard">
+
+
+            <div class="col-md-3" style="padding-left: 2em;">
+                <p style="margin-bottom: 2em;">
+                    Follow the steps to enter the new measurements.
+                </p>
+                <ol class="acc-wizard-sidebar">
+
+                    {% partial __SELF__ ~ '::inputdata_sidebar_step' link="inputdata_initial" title="Basic data" active="true"  %}
+
+                    <div id="partialSidebarSteps">
+                        {% partial __SELF__ ~ '::inputdata_sidebar' %}
+                    </div>
+
+                    <li class="acc-wizard-todo"><a href="#input_final">Confirm values</a></li>
+                </ol>
+            </div>
+
+
+
+            <div class="col-md-9" style="padding-right: 2em;">
+                <div id="accordion-demo" class="panel-group">
+
+                    <form
+                        data-request = "{{ __SELF__ }}::onInputData"
+                        data-request-success = "Measurements uploaded successfully!"
+                    >
+
+                        {% partial __SELF__ ~ '::inputdata_body_step_initial' %}
+
+                        <div id="partialBodySteps">
+                            {% partial __SELF__ ~ '::inputdata_body' %}
+                        </div>
+
+                        {% partial __SELF__ ~ '::inputdata_body_step_final' %}
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

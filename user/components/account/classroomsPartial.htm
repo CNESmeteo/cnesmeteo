@@ -1,0 +1,17 @@
+<div id="partialClassroom" class="form-group">
+    <select
+            id="classroom"
+            name="classroom"
+            class="select-block custom-theme-select"
+    >
+        {% for key, classroomName in classrooms %}
+            <option
+                value="{{ key }}"
+                {% if key == classroom %} " selected="selected" " {% endif %}
+            >
+                {{ classroomName|e }}
+            </option>
+        {% endfor %}
+    </select>
+
+</div>

@@ -1,0 +1,23 @@
+<div class="form-group">
+    <select
+            id="country"
+            name="country"
+            class="select-block custom-theme-select"
+            data-request="{{__SELF__}}::onCountryChange"
+            data-request-update="'{{__SELF__}}::state_province': '#partialStateProvince'"
+            data-request-success='$("#partialStateProvince").find(".custom-theme-select").selectpicker({style: "btn-primary", menuStyle: "dropdown-inverse"})'
+            >
+        {% for key, countryName in countries %}
+            <option
+                value="{{ key }}"
+                {% if key == country %} " selected="selected" " {% endif %}
+            >
+                {{ countryName|e }}
+            </option>
+        {% endfor %}
+    </select>
+</div>
+
+<div id="partialStateProvince">
+    {% partial __SELF__ ~ '::state_province' %}
+</div>

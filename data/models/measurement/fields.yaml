@@ -1,0 +1,52 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+  last_name:
+    span: left
+    label: Last name
+
+  first_name:
+    span: right
+    label: First name
+
+  email:
+    span: left
+    label: Email
+
+  phone:
+    span: right
+    label: Phone
+
+  password:
+    type: password
+    span: left
+    label: Password
+
+  password_confirmation:
+    type: password
+    span: right
+    label: Password Confirmation
+
+  address:
+    type: text
+    span: full
+    label: Address
+    context: update #show field only for "edit"
+
+  groups:
+    type: relation
+    span: full
+    label: Group(s)
+
+secondaryTabs:
+  fields:
+
+    avatar:
+      label: Avatar
+      type: fileupload
+      options:
+        mode: image
+        image-height: 260
+        image-width: 260

@@ -1,0 +1,16 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: backend::lang.user.group.name_field
+        searchable: yes
+
+    description:
+        label: Description
+
+    updated_at:
+        label: Last updated
+        type: datetime
+        format: d/M/Y | H:i:s

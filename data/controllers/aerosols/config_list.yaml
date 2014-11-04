@@ -1,0 +1,16 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+title: Manage Aerosols
+list: @/plugins/cnesmeteo/data/models/aerosol/columns.yaml
+modelClass: CnesMeteo\Data\Models\Aerosol
+recordUrl: cnesmeteo/data/aerosols/update/:measurement_id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showCheckboxes: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

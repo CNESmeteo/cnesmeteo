@@ -1,0 +1,19 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+        searchable: true
+
+    organization_name:
+        label: Organization
+        relation: organization
+        select: @name
+        searchable: true
+
+    users_count:
+        label: Nº Members
+        searchable: true
+        type: number

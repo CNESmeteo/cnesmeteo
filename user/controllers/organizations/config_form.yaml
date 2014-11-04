@@ -1,0 +1,16 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Organization
+form: @/plugins/cnesmeteo/user/models/organization/fields.yaml
+modelClass: CnesMeteo\User\Models\Organization
+defaultRedirect: cnesmeteo/user/organizations
+
+create:
+    redirect: cnesmeteo/user/organizations/update/:id
+    redirectClose: cnesmeteo/user/organizations
+
+update:
+    redirect: cnesmeteo/user/organizations
+    redirectClose: cnesmeteo/user/organizations
